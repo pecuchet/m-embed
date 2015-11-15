@@ -1,0 +1,61 @@
+{
+  "provider_url": "https://aeon.co",
+  "description": "Aeon is a digital magazine of ideas and culture, publishing an original essay every weekday.",
+  "embeds": [],
+  "safe": true,
+  "provider_display": "aeon.co",
+  "related": [],
+  "favicon_url": "https://aeon.co/favicon.ico",
+  "authors": [],
+  "images": [{
+    "caption": null,
+    "url": "https://omicron.aeon.co/featuredessayimages/645623ae-67d7-4cc8-a6ed-4838b54cca74/show_mcwhorter-featured.jpg",
+    "height": 680,
+    "width": 1700,
+    "size": 890459
+  }, {
+    "caption": null,
+    "url": "https://omicron.aeon.co/images/fa0b75b2-be6c-4dad-a3c6-14f84c5d55c1/header_SPEAKING-WITH-LIGHT-main-1.jpg",
+    "height": 1136,
+    "width": 2000,
+    "size": 1017545
+  }, {
+    "caption": null,
+    "url": "https://omicron.aeon.co/images/ad85683c-1c1c-4101-b715-f8333cd8c523/card_NORMA-AND-CECILIO-Main.jpg",
+    "height": 313,
+    "width": 500,
+    "size": 106162
+  }, {
+    "caption": null,
+    "url": "https://omicron.aeon.co/images/38482387-aac0-4f45-8eca-4ab3b499c83f/card_SIZED-feathered_trex.jpg",
+    "height": 313,
+    "width": 500,
+    "size": 99184
+  }, {
+    "caption": null,
+    "url": "https://omicron.aeon.co/images/38482387-aac0-4f45-8eca-4ab3b499c83f/card_SIZED-feathered_trex.jpg",
+    "height": 156,
+    "width": 250,
+    "size": 99184
+  },{
+    "caption": null,
+    "url": "https://omicron.aeon.co/images/fa0b75b2-be6c-4dad-a3c6-14f84c5d55c1/header_SPEAKING-WITH-LIGHT-main-1.jpg",
+    "height": 113,
+    "width": 200,
+    "size": 1017545
+  }
+  ],
+  "cache_age": 86400,
+  "language": "English",
+  "app_links": [],
+  "original_url": "http://aeon.co",
+  "url": "https://aeon.co/",
+  "media": {},
+  "title": "Aeon - ideas and culture",
+  "offset": null,
+  "lead": null,
+  "content": null,
+  "published": null,
+  "provider_name": "Aeon",
+  "type": "html"
+}

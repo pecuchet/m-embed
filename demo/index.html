@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M-Embed | demo</title>
+    <script src="//cdn.jsdelivr.net/medium-editor/5.8.2/js/medium-editor.min.js"></script>
+    <script src="../dist/js/medium-editor-m-embed.min.js"></script>
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--MediumEditor-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css">
+    <!--MediumEditor default theme-->
+    <link rel="stylesheet" href="//linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor/dist/css/themes/default.css" type="text/css">
+    <!--M-Embed-->
+    <link rel="stylesheet" href="../css/medium-editor-m-embed.css" type="text/css">
+    <!--Demo-->
+    <link rel="stylesheet" href="./css/demo.css" type="text/css">
+</head>
+<body>
+    <a href="https://github.com/pecuchet/m-embed"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+    <div id="demo">
+        <header>
+            <h1>M-Embed</h1>
+            <p>A <a href="http://yabwe.github.io/medium-editor/">MediumEditor</a> extension to embed an URL in your inline editor.</p>
+        </header>
+        <div class="editable">
+            <em>Creating a preview for a link in your MediumEditor is as easy as selecting an URL and clicking on the picture icon. Just try:
+                <br><b>http://www.m-embed.me</b>
+                <br><br>You can also select a random word and type the URL in the toolbar.
+            M-Embed will create the preview at the bottom of your editor. Once the embed is created, you can choose one of the returned images or iFrame, or discard them altogether.</em>
+            <br><br>
+            (The demo uses a predefined response object to bypass the API key requirement&mdash;whatever URL you select or type, you will get the same response here.)
+        </div>
+        <footer id="events">
+            <div class="left"><button id="cleanup">Trigger 'cleanup' event</button></div><!--
+            --><div class="right"><button id="revive">Trigger 'revive' event</button></div>
+            <p>Once the embed is created, the extension provides event handlers to cleanup or 'revive' the embed, which can be uses when saving or retrieving the content of the editor.</p>
+        </footer>
+    </div>
+    <script>
+        var d = document,
+            editors = d.getElementsByClassName('editable'),
+            medium = new MediumEditor(
+                editors,
+                {
+                  elementsContainer : d.getElementById('mediumElements'),
+                  buttonLabels : 'fontawesome',
+                  mEmbed : {
+                      fakeData : '/m-embed/demo/data/demo.json'
+                  },
+                  toolbar: {
+                      buttons: [
+                          'bold',
+                          'italic',
+                          'underline',
+                          'anchor',
+                          'mEmbed'
+                      ]
+                  },
+                  extensions: {
+                      mEmbed: new MEmbed()
+                  }
+                });
+
+        d.getElementById('cleanup').addEventListener('click', function(){
+            medium.trigger('m-embed:cleanup', editors[0]);
+            d.getElementById('cleanup').style.display = 'none';
+            d.getElementById('revive').style.display = 'block';
+        });
+        d.getElementById('revive').addEventListener('click', function(){
+            medium.trigger('m-embed:revive', editors[0]);
+            d.getElementById('cleanup').style.display = 'block';
+            d.getElementById('revive').style.display = 'none';
+        });
+
+        medium.subscribe('m-embed:error', function (data) {
+            console.log('EVENT :::: m-embed error', data);
+        });
+        medium.subscribe('m-embed:success', function (data) {
+            d.getElementById('cleanup').style.display = 'block';
+            console.log('EVENT :::: fetch success', data);
+        });
+        medium.subscribe('m-embed:progress', function (data) {
+            console.log('EVENT :::: fetch progress', data.msg);
+        });
+        medium.subscribe('m-embed:media', function (media) {
+            d.getElementById('cleanup').style.display = 'block';
+            console.log('EVENT :::: selected media', media);
+        });
+        medium.subscribe('m-embed:no-media', function () {
+            console.log('EVENT :::: media removed');
+        });
+        medium.subscribe('m-embed:removed', function (view) {
+            d.getElementById('cleanup').style.display = 'none';
+            d.getElementById('revive').style.display = 'none';
+            console.log('EVENT :::: preview removed',view);
+        });
+    </script>
+</body>
+</html>

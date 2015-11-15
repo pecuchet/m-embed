@@ -2,11 +2,12 @@
 M-Embed is a [MediumEditor](https://github.com/daviferreira/medium-editor) extension to embed URL previews with [Embedly](http://embed.ly)'s API in your contenteditable editor. Once embedded, you can choose between the multiple media (images, iframes) returned for the URL. M-Embed has been written using vanilla JavaScript, no additional frameworks are required.
 
 ## Demo
-[Here is a demo](http://pecuchet.github.com/m-embed) (using predefined data&mdash;without making a request to Embedly, which would require an API key. Embedly has free and paid plans to access their API.)
+[Here is a demo](http://pecuchet.github.io/m-embed) (using predefined data&mdash;without making a request to Embedly, which would require an API key. Embedly has free and paid plans to access their API.)
 
 ## Installation
 **Via npm:**  
 Run in your console: `npm install m-embed`
+
 <br>
 **Manual installation:**  
 Download and reference MediumEditor and M-Embed along with their stylesheets. No other dependencies are necessary.
@@ -42,6 +43,7 @@ var editor = new MediumEditor('.editable', {
 
 ## Options
 The following options, and their defaults, are available to customize M-Embed. The options object is passed as a property named `mEmbed` when you instantiate MediumEditor.
+
 <br>
 **Embedly options:**  
 

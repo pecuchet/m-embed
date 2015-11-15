@@ -7,7 +7,7 @@ body {
     font-size: 62.5%;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     overflow-y: scroll;
-    background: #aecdf5;
+    background: #2a303c;
 }
 [contenteditable]:focus {
     outline: 0 solid transparent;
@@ -16,7 +16,7 @@ body {
     width: 60%;
     max-width: 530px;
     min-width: 200px;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
     font-size: 1.8em;
     background: #FFF;
     padding: 1.5em;

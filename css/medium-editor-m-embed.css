@@ -1,0 +1,133 @@
+
+/* -------------------------- m-embed : medium toolbar */
+
+.error .medium-editor-toolbar-input,
+.error .medium-editor-toolbar-save {
+    color: red;
+}
+
+/* -------------------------- m-embed : main */
+
+.m-embed {
+    position: relative;
+    color: #CCC;
+    font-family: sans-serif;
+    margin-top: 1em;
+    border: 1px solid #EEE;
+}
+.m-embed nav {
+    position: absolute; top: 0; z-index: 999;
+    width: 100%; height: 2em;
+}
+.m-embed a {
+    display: block;
+    width: 100%; height: 100%;
+    text-decoration: none;
+    cursor: default;
+}
+.m-embed.thumbnail a {
+    display: table;
+}
+
+/* -------------------------- m-embed : ui */
+
+.m-embed nav div {
+    display: inline-block;
+    float: left;
+}
+.m-embed-btn {
+    cursor: pointer;
+}
+
+/* -------------------------- m-embed : loading progress */
+
+.m-embed.loading {
+    text-align: center;
+    padding: 2em;
+}
+.m-embed-progress {
+    width: 80%; height: 2px;
+    margin: 1em auto;
+}
+.m-embed-progress div {
+    width: 0; height: 100%;
+    background: cornflowerblue;
+}
+
+/* -------------------------- m-embed : error display */
+
+.m-embed.error {
+    text-align: center;
+    padding: 2em;
+    color: darkred;
+}
+.m-embed.error p {
+    border: 1px solid darkred;
+    padding: 1em;
+}
+
+/* -------------------------- m-embed : visuals */
+
+.m-embed-dropTrap {
+    position: absolute; top: 0; right: 0; z-index: 2;
+    width: 100%; height: 100%;
+}
+.m-embed-visual {
+    position: relative;
+    height: 300px;
+}
+.m-embed-html {
+    position: absolute; top: 0; left: 0; z-index: 1;
+    width: 100%; height: 300px;
+    display: none;
+}
+.show-html .m-embed-html {
+    display: block;
+}
+.m-embed-image {
+    background: no-repeat center;
+    background-size: cover;
+    height: 300px;
+}
+.m-embed-image.mini {
+    background-size: auto;
+}
+
+.thumbnail .m-embed-visual {
+    display: table-cell;
+    vertical-align: top;
+    width: 30%; height: 100%;
+}
+.thumbnail .m-embed-image {
+    height: 100%;
+}
+.thumbnail .m-embed-text {
+    display: table-cell;
+    vertical-align: top;
+    width: 70%;
+}
+
+/* -------------------------- m-embed : visuals : html */
+
+.m-embed-visual iframe {
+    width: 100%; height: 100%;
+}
+
+/* -------------------------- m-embed : text content */
+
+.m-embed-text {
+    color: #000;
+    padding: 2em;
+}
+.m-embed-text h4,
+.m-embed-text p {
+    margin: 0 0 1.33em 0;
+}
+.m-embed-text footer {
+    text-transform: uppercase;
+    font-size: .5em;
+    color: #CCC;
+}
+.m-embed:hover footer {
+    text-decoration: underline;
+}

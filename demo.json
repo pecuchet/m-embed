@@ -21,21 +21,9 @@
     "size": 1017545
   }, {
     "caption": null,
-    "url": "https://omicron.aeon.co/images/ad85683c-1c1c-4101-b715-f8333cd8c523/card_NORMA-AND-CECILIO-Main.jpg",
-    "height": 313,
-    "width": 500,
-    "size": 106162
-  }, {
-    "caption": null,
     "url": "https://omicron.aeon.co/images/38482387-aac0-4f45-8eca-4ab3b499c83f/card_SIZED-feathered_trex.jpg",
     "height": 313,
     "width": 500,
-    "size": 99184
-  }, {
-    "caption": null,
-    "url": "https://omicron.aeon.co/images/38482387-aac0-4f45-8eca-4ab3b499c83f/card_SIZED-feathered_trex.jpg",
-    "height": 156,
-    "width": 250,
     "size": 99184
   },{
     "caption": null,
@@ -50,7 +38,13 @@
   "app_links": [],
   "original_url": "http://aeon.co",
   "url": "https://aeon.co/",
-  "media": {},
+  "media": {
+    "duration": 73,
+    "width": 854,
+    "html": "<iframe src=\"//www.youtube.com/embed/gR_mfk5svTs\" frameborder=\"0\" scrolling=\"no\" allowfullscreen></iframe>",
+    "type": "video",
+    "height": 480
+  },
   "title": "Aeon - ideas and culture",
   "offset": null,
   "lead": null,

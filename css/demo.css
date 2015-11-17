@@ -21,9 +21,6 @@ body {
     background: #FFF;
     padding: 1.5em;
     line-height: 1.55;
-    -webkit-box-shadow: 0 0 133px 30px rgba(255,255,255,.2);
-    -moz-box-shadow: 0 0 133px 30px rgba(255,255,255,.2);
-    box-shadow: 0 0 133px 30px rgba(255,255,255,.2);
 }
 header {
     text-align: center;

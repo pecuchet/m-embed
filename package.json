@@ -1,6 +1,6 @@
 {
   "name": "m-embed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An embed extension for MediumEditor using Embedly's API (http://embed.ly).",
   "main": "medium-editor-m-embed.js",
   "author": "dotburo (http://www.dotburo.org)",

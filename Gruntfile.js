@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         umd = '(function (root, factory) {\n'
                 + "    if (typeof define === 'function' && define.amd) {\n"
                 + "        define(['MediumEditor'], factory);\n"
-                + "    } else if (typeof exports === 'object') {\n"
+                + "    } else if (typeof module === 'object') {\n"
                 + "        module.exports = factory(require('medium-editor'));\n"
                 + "    } else {\n"
                 + "        root.MEmbed = factory(root.MediumEditor);\n"

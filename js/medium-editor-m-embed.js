@@ -1,9 +1,9 @@
-/*! m-embed 1.0.0 by dotburo (http://www.dotburo.org) license: GPL-3.0+ */
+/*! m-embed 1.0.4 by dotburo (http://www.dotburo.org) license: GPL-3.0+ */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(['MediumEditor'], factory);
-    } else if (typeof exports === 'object') {
-        exports.MEmbed = factory(require('MediumEditor'));
+    } else if (typeof module === 'object') {
+        module.exports = factory(require('medium-editor'));
     } else {
         root.MEmbed = factory(root.MediumEditor);
 }

@@ -1,6 +1,6 @@
 {
   "name": "m-embed",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An embed extension for MediumEditor using Embedly's API (http://embed.ly).",
   "main": "dist/js/medium-editor-m-embed.min.js",
   "author": "dotburo (http://www.dotburo.org)",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-requirejs": "^0.4.4"
+    "grunt-contrib-requirejs": "^0.4.4",
+    "requirejs": "^2.3.1"
   }
 }

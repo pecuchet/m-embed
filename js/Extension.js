@@ -231,7 +231,7 @@ define(['MediumEditor','Request','View'], function (Medium, EmbedRequest, EmbedV
             onSubmit : function (e)
             {
                 var editor = this.base.getFocusedElement(),
-                    editorIndex = parseInt(editor.getAttribute('medium-editor-index'), 10),
+                    editorIndex = editor.getAttribute('medium-editor-index'),
                     existingView, view;
 
                 e.preventDefault();
@@ -280,7 +280,7 @@ define(['MediumEditor','Request','View'], function (Medium, EmbedRequest, EmbedV
 
                 if (!editor) { return; }
 
-                editorIndex = parseInt(editor.getAttribute('medium-editor-index'), 10);
+                editorIndex = editor.getAttribute('medium-editor-index');
 
                 for (v in this.views[editorIndex]) {
                     if (this.views[editorIndex].hasOwnProperty(v)) {
@@ -302,9 +302,7 @@ define(['MediumEditor','Request','View'], function (Medium, EmbedRequest, EmbedV
 
                 if (!editor) { return; }
 
-                editorIndex = parseInt(editor.getAttribute('medium-editor-index'), 10);
-
-                if (isNaN(editorIndex)) { return; }
+                editorIndex = editor.getAttribute('medium-editor-index');
 
                 // If it doesn't exist, create an object to hold this editor's views.
                 this.views[editorIndex] = this.views[editorIndex] ? this.views[editorIndex] : {};
